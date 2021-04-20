@@ -99,7 +99,7 @@ function matches(){
                 <h5 class="card-title">${el.name}</h5>
                 <p class="card-text">${el.bio}.</p>
               </div>
-              <a href="#" class="btn btn-success col-12">Liked you back!</a>
+              <div class="d-inline p-2 bg-success text-white text-center">Likes you back!</div>
           </div>
         </div>
       </div>`
