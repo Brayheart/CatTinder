@@ -90,7 +90,8 @@ function matches(){
   document.getElementsByClassName('card')[0].remove()
   liked.forEach(el => {
     if(el.like === 'True'){
-      var temp = `<div class="row">
+      var temp = document.createElement('div')
+      temp.innerHTML = `<div class="row">
         <div class="col  d-flex justify-content-center">
           <div class="m-5 card" style="width: 18rem;">
             <img src="${el.image}" class="card-img-top" alt="..." style='height: 200px;width: auto;'>
@@ -98,12 +99,11 @@ function matches(){
                 <h5 class="card-title">${el.name}</h5>
                 <p class="card-text">${el.bio}.</p>
               </div>
+              <a href="#" class="btn btn-success col-12">Liked you back!</a>
           </div>
         </div>
       </div>`
-      console.log(document.getElementsByClassName('container')[0])
-      //To Do: render matched cats to DOM
-      document.getElementsByClassName('container')[0].append(JSON.parse(temp))
+      document.getElementById('match').appendChild((temp))
     }
   })
 }
